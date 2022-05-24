@@ -1,0 +1,55 @@
+{% extends "poll/base.html" %}
+{% block title %}Users Wish List{% endblock %}
+{% block content %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Inconsolata:wght@200;300&family=Josefin+Sans:wght@100&family=Macondo&family=Pacifico&family=Paytone+One&family=Permanent+Marker&family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+
+<div class="col-12 mx-auto">
+  <h1 style="font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Macondo', cursive;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Paytone One', sans-serif;
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Rajdhani', sans-serif;">My Wishlist</h1>
+
+  <hr />
+
+  {% if wishlist %}
+  {% for product in wishlist  %}
+
+  <div class="card mb-3 rounded-0" style="margin-left: 20px">
+    <div class="row g-0">
+      <div class="col-md-2">
+        {% for image in posts  %}
+          
+          <img class="img-fluid d-block p-2" width="135px" src="{{t.p_photo.url}}"
+            alt="sdfghjk" />
+          
+        {% endfor %}
+      </div>
+            
+      <div class="card text-black">
+
+          <div class="cardo" >
+            <img src="{{product.p_photo.url}}" alt="" width="250px" height="250px"style="padding: 20px; "  >
+            <div class="down">
+            <p class="pt" style="font-size: 25px; font-family: 'Inconsolata', monospace;"> {{product.p_title}}</p>
+            <p class="tg">  {{product.p_price}} T</p>
+            <a href="{{ product.get_absolute_url }}" id="btn" class="btn btn-outline-dark">More</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+  {% else %}
+  <p class="card-text">No products have been added to your wishlist yet</p>
+  {% endif %}
+
+
+
+</div>
+{% endblock %}

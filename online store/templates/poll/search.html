@@ -1,0 +1,72 @@
+{% extends "poll/base.html" %}
+{% block title %} Search {% endblock %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Inconsolata:wght@200;300&family=Josefin+Sans:wght@100&family=Macondo&family=Montserrat:wght@100&family=Pacifico&family=Paytone+One&family=Permanent+Marker&family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Inconsolata:wght@200;300&family=Josefin+Sans:wght@100&family=Macondo&family=Montserrat:wght@100&family=Pacifico&family=Paytone+One&family=Permanent+Marker&family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+ 
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Inconsolata:wght@200;300&family=Josefin+Sans:wght@100&family=Macondo&family=Montserrat:wght@100&family=Pacifico&family=Paytone+One&family=Permanent+Marker&family=Rajdhani:wght@300&display=swap" rel="stylesheet">{% block content %}
+    {% if query %}
+        <h1 style=" font-family: 'Dancing Script', cursive;
+        font-family: 'Inconsolata', monospace;
+        font-family: 'Josefin Sans', sans-serif; margin-top: 15px">Posts containing "{{ query }}"</h1>
+        <h3 style="font-family: 'Dancing Script', cursive;
+        font-family: 'Inconsolata', monospace;
+        font-family: 'Josefin Sans', sans-serif;">
+            {% with results.count as total_results %}
+                Found {{ total_results }} results {{ total_results|pluralize }}
+            {% endwith %}
+        </h3>
+        {% for post in results %}
+     
+
+        <section style="display:flex; justify-content: center">
+        
+                <div class="cardo" style="border: 1px solid lightgrey" >
+                  <img src="{{post.p_photo.url}}" alt="" width="250px" height="250px"style="padding: 20px; "  >
+                  <div class="down">
+                  <p class="pt" style="font-size: 25px; font-family: 'Inconsolata', monospace;"> {{post.p_title}}</p>
+
+                  <p class="tg">  {{post.p_price}} T</p>
+                  <a href="{{ post.get_absolute_url }}" id="btn" class="btn btn-outline-dark">More</a>
+                </div>
+              </div>
+        
+          </section>  
+ 
+                
+            <line></line>
+            
+            {% empty %}
+                <p>There no results for you query</p>
+        {% endfor %}
+        <p>
+            <a href="{% url "post_search" %}" style="margin-left: 120px;font-family: 'Dancing Script', cursive;
+            font-family: 'Inconsolata', monospace;
+            font-family: 'Josefin Sans', sans-serif; font-size: 30px; text-decoration: none;">Search again</a>
+        </p>
+    {% else %}
+        <h1 style ="font-family: 'Dancing Script', cursive;
+        font-family: 'Inconsolata', monospace;
+        font-family: 'Josefin Sans', sans-serif;
+      
+       
+      
+
+ 
+       ">Search for posts</h1>
+        <form method="get">
+            {{ form.as_p }}
+            <input type="submit" value="Search" style=" margin-left: 3px; margin-top: 25px;font-family: 'Dancing Script', cursive;
+            font-family: 'Inconsolata', monospace;
+            font-family: 'Josefin Sans', sans-serif;
+           ">
+        </form>
+    {% endif %}
+{% endblock %}

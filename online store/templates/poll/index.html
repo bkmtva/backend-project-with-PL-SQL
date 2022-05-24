@@ -1,0 +1,447 @@
+
+
+{% extends 'poll/base1.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+<html>
+<head>
+  
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300&display=swap" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Koulen&family=Raleway:wght@200;400&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300&family=Josefin+Sans:wght@100&family=Permanent+Marker&family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300&family=Josefin+Sans:wght@100&family=Macondo&family=Permanent+Marker&family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+    <title>{{ title }}</title> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inconsolata:wght@200;300&family=Josefin+Sans:wght@100&family=Macondo&family=Permanent+Marker&family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+   {% comment %} <link type="text/css" href="{% static 'poll/css/styles.css' %}" rel="stylesheet"> {% endcomment %}
+    <link href="{% static "poll/css/style1.css" %}" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300&family=Josefin+Sans:wght@100&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<style>
+  .navbar { background-color: black; }
+.navbar .navbar-nav .nav-link { color: #fff; }
+.navbar .navbar-nav .nav-link:hover { color: #fbc531; }
+.navbar .navbar-nav .active > .nav-link { color: #fbc531; }
+
+footer a.text-light:hover { color: #fed136!important; text-decoration: none; }
+footer .cizgi { border-right: 1px solid #535e67; }
+@media (max-width: 992px) { footer .cizgi { border-right: none; } }
+</style>
+
+<body style="    background-color: #f4f4f4;">
+
+
+
+
+  
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/mainphoto.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md block">
+          <div class="container">
+            <div class="row justify-content-start text-left">
+              <div class="col-lg-8 mx-auto">
+                <p>NEW COLLECTION 2022</p>
+                <p style="font-family: 'Inconsolata', monospace;
+                font-family: 'Josefin Sans', sans-serif;
+                font-family: 'Permanent Marker', cursive;
+                font-family: 'Rajdhani', sans-serif;">SPRING/SUMMER COLLECTION 2022</p>
+                <H1>Get up to 30% off</H1>
+                <button class="btn0 mt-3 m1-2"><a href="{% url 'catalog' %}">SHOW NOW</a></button> 
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="2000">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://d1bjsubfkwe11u.cloudfront.net/pages/macbook-family/header_macbook_tablet.jpg"
+              width="100%" height="670px"alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="container">
+                <div class="row justify-content-start text-left">
+                  <div class="col-lg-8 mx-auto">
+                    <p>NEW COLLECTION 2022</p>
+                    <h1 style="font-family: 'Inconsolata', monospace;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-family: 'Permanent Marker', cursive;
+                    font-family: 'Rajdhani', sans-serif;">BUY/SELL in ONE place</h1>
+                    <button class="btn0 mt-3 m1-2"><a href="{% url 'catalog' %}">SHOW NOW</a></button> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <img   src="https://cdn.pixabay.com/photo/2016/03/26/13/09/workspace-1280538_1280.jpg"   width="100%" height="670px" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="container">
+              <div class="row justify-content-start text-left">
+                <div class="col-lg-8 mx-auto">
+                  <p>NEW COLLECTION 2022</p>
+                    <h1 style="font-family: 'Inconsolata', monospace;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-family: 'Permanent Marker', cursive;
+                    font-family: 'Rajdhani', sans-serif;">Profitable is our word!</h1>
+                    <button class="btn0 mt-3 m1-2"><a href="{% url 'catalog' %}">SHOW NOW</a></button> 
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+          <div class="carousel-item">
+            <img   src="https://cdn.pixabay.com/photo/2015/06/25/17/22/smart-watch-821559_1280.jpg" alt="..."  width="100%" height="670px">
+        
+          <div class="carousel-caption d-none d-md-block">
+            <div class="container">
+              <div class="row justify-content-start text-left">
+                <div class="col-lg-8 mx-auto">
+                  <p>NEW COLLECTION 2022</p>
+                    <h1 style=" font-family: 'Inconsolata', monospace;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-family: 'Permanent Marker', cursive;
+                    font-family: 'Rajdhani', sans-serif;">Get up to 30%</h1>
+                    <button class="btn0 mt-3 m1-2"><a href="{% url 'catalog' %}">SHOW NOW</a></button> 
+             </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev" style="left:-5%">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next" style="right:-5%">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+          </a>
+        </div>
+      </div>
+
+{% comment %} 
+      <section class="parallex1 py-5">
+          <img src="https://cdn.pixabay.com/photo/2019/01/17/19/34/apple-3938463_960_720.jpg" width="100%" height="350px">
+          <p class="py-3">New iPhones, MacBooks at low prices only with us</p>
+        <div class="container py-5 text-white text-center">
+          <div class="row py-3">
+            <div class="col-lg-9 mx-auto">
+                <p style="   font-size:60px;  font-family: 'Gill Sans', sans-serif;">BUY AND SELL</p>
+      
+  
+              <button class="btn2 mr-1">SHOP</button>
+              <button class="btn3 mr-1">GET</button>
+            </div>
+          </div>
+        </div>
+      </section> {% endcomment %}
+      
+
+                {% comment %} NEW COLLECTION {% endcomment %}
+                <h1 class="text-center"  style="font-family: 'Inconsolata', monospace;
+                font-family: 'Josefin Sans', sans-serif; padding:25px; ">New Collection</h1>
+                  <section style="display:flex; justify-content: center">
+                      {% for t in posts %}
+                          <div style="padding: 20px;  border: 1px solid lightgrey; margin: 20px; box-shadow: 10px 10px 10px 10px lightgrey; background-color: white" >
+                            <img src="{{t.p_photo.url}}" alt="" width="250px" height="250px"style="padding: 20px; "  >
+                            <p class="pt-3" style="font-size: 25px; font-family: 'Inconsolata', monospace;"> <b> {{t.p_title}}</b></p>
+                            <p>{{t.p_price}} t</p>
+                            <a href="{{ t.get_absolute_url }}" id="btn" class="btn btn-outline-dark">More</a>
+                          </div>
+                    {% endfor %}
+                  </section>  
+                  
+              
+
+               <div style="display: flex; justify-content: center">
+                <nav class="list-pages">
+                    <ul>
+                      {% if  is_paginated%}
+                      {% if page_obj.has_previous %}
+                      <a class="btn btn-outline-dark mb-4" href="?page=1">1st</a>
+                      <a class="btn btn-outline-dark mb-4" href="?page={{ page_obj.previous_page_numbers }}">&lt;</a>
+                      {% endif %}
+                      {% for p in page_obj.paginator.page_range %}
+                      {% if page_obj.number == p%}
+                      <a class="btn btn-dark mb-4" href="?page={{p}}">{{p}}</a>
+                      {% elif p > page_obj.number|add:-3 and p < page_obj.number|add:3 %}
+                      <a class="btn btn-outline-dark mb-4" href="?page={{p}}">{{p}}</a>
+                      {% endif %}
+                      {% endfor %}
+                      {% if page_obj.has_next %}
+                      <a class="btn btn-outline-dark mb-4" href="?page={{ page_obj.next_page_number }}">&gt;</a>
+                      <a class="btn btn-outline-dark mb-4" href="?page={{ page_obj.paginator.num_pages }}">last</a>
+                      {% endif %}
+                      {% endif %}
+                    </ul>
+          
+                  </nav>
+                </div>
+            </div>
+             
+           
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="parallex py-5">
+        <div class="container py-5 text-white text-center">
+          <div class="row py-3">
+            <div class="col-lg-9 mx-auto">
+                <p style="   font-size:60px;  font-family: 'Inconsolata', monospace;
+                font-family: 'Josefin Sans', sans-serif; weight: 800;">BUY AND SELL</p>
+      
+              <p class="py-3 style="  style=" font-size:30px;  font-family: 'Inconsolata', monospace;
+              font-family: 'Josefin Sans', sans-serif; weight: 600">New iPhones, MacBooks at low prices only with us</p>
+              <button class="btn0 mt-3 m1-2"><a href="{% url 'catalog' %}">SHOW NOW</a></button> 
+
+               
+            </div>
+          </div>
+        </div>
+      </section>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Inconsolata:wght@200;300&family=Josefin+Sans:wght@100&family=Macondo&family=Pacifico&family=Permanent+Marker&family=Rajdhani:wght@300&display=swap" rel="stylesheet">    <section class="py-5">
+        <div class="container my-5">
+  
+            <div class="row justify-content-center">
+             
+                <div class="col-lg-8">
+                    <h2 style="font-family: 'Dancing Script', cursive;
+                    font-family: 'Inconsolata', monospace;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-family: 'Macondo', cursive;
+                    font-family: 'Pacifico', cursive;
+                    font-family: 'Permanent Marker', cursive;
+    
+                   font-size: 50px">MAKE YOU LIFE EASIER TO BE!</h2>
+                    <p class='lead' style="font-family: 'Dancing Script', cursive;
+                    font-family: 'Inconsolata', monospace;">This website helps all people to purchase our products for a favorable price!
+
+                    </p>
+                    <p  style="font-family: 'Inconsolata', monospace;
+                    font-family: 'Josefin Sans', sans-serif; font-size: 30px
+                    ">Every day people throw away their working or non - working products . People sometimes look only for apple products because there are a lot of ads in other apps or websites and also other products that the user is not interested in! We are facilitating your life!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+     
+      <header class="py-5 bg-image-full" style="background-image: url('https://cdn.pixabay.com/photo/2019/12/17/17/09/woman-4702060_1280.jpg')">
+          <div class="text-center my-5">
+              <img class="img-fluid rounded-circle mb-4" src="https://i.pinimg.com/736x/3f/ad/ed/3faded538286e1d6fc40e2596c3a4266.jpg" width="150px" alt="..." />
+              <h1 class="text-black fw-bolder" style="font-family: 'Inconsolata', monospace;
+              font-family: 'Josefin Sans', sans-serif;
+              font-family: 'Permanent Marker', cursive;
+              font-family: 'Rajdhani', sans-serif; font-size: 50px">LOCATION</h1>
+              <h1 class="text-black fw-bolder" style="font-family: 'Inconsolata', monospace;
+              font-family: 'Josefin Sans', sans-serif;
+              font-family: 'Permanent Marker', cursive;
+              font-family: 'Rajdhani', sans-serif; font-size: 30px">Tleukhanova 38a/1</h1>
+          </div>
+      </header>
+
+      
+      <!-- Content section-->
+      <section class="py-5">
+          <div class="container my-5">
+              <div class="row justify-content-center">
+                  <div class="col-lg-6">
+                      <h2 class="text-black fw-bolder" style="font-family: 'Inconsolata', monospace;
+                      font-family: 'Josefin Sans', sans-serif;
+                      font-family: 'Permanent Marker', cursive;
+                      font-family: 'Rajdhani', sans-serif; font-size: 20px;text-align: center;">Choose your most likeble apple-product!</h2>
+                      <h1 class="lead" class="text-black fw-bolder" style="font-family: 'Dancing Script', cursive;
+                      font-family: 'Inconsolata', monospace;font-family: 'Josefin Sans', sans-serif;
+                    
+                      font-size: 40px; text-align: center; letter-spacing: 10px;">Profit is our second word!</h1>
+                         </div>
+              </div>
+          </div>
+      </section>
+      <!-- Image element - set the background image for the header in the line below-->
+      {% comment %} <div class="py-5 bg-image-full" style="background-image: url('https://cdn.pixabay.com/photo/2016/11/29/09/16/architecture-1868667_1280.jpg')">
+          <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+          <div style="height: 20rem"></div>
+      </div> {% endcomment %}
+      <!-- Content section-->
+     
+      <!-- Footer-->
+      
+      <!-- Bootstrap core JS-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Core theme JS-->
+      <script src="js/scripts.js"></script>
+
+
+
+
+     
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+
+
+  <!-- Footer -->
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+
+
+  <footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4" style="   font-family: 'Inconsolata', monospace;
+          font-family: 'Josefin Sans', sans-serif;">About company</h5>
+
+          <p style=" font-size:20px; font-family: 'Inconsolata', monospace;
+          font-family: 'Josefin Sans', sans-serif;">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti.
+          </p>
+
+          <p style=" font-size:20px; font-family: 'Inconsolata', monospace;
+          font-family: 'Josefin Sans', sans-serif;">
+            Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+            molestias.
+          </p>
+
+          <div class="mt-4">
+            <!-- Facebook -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fa fa-twitter"></i></a>
+            <!-- Dribbble -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fa fa-instagram"></i></a>
+            <!-- Twitter -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fa fa-pinterest"></i></a>
+            <!-- Google + -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fa fa-google"></i></a>
+            <!-- Linkedin -->
+          </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 pb-1" style=" font-family: 'Inconsolata', monospace;
+          font-family: 'Josefin Sans', sans-serif; font-size:20px; ">OUT LOCATION</h5>
+
+         
+          <ul class="fa-ul" style="margin-left: 1.65em;">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fa fa-sign-in fa-fw mr-1"></i></span><span class="ms-2" style="  font-family: 'Inconsolata', monospace;
+              font-family: 'Josefin Sans', sans-serif; font-size:20px; ">Kazakhstan, Almaty</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fa fa-sign-in fa-fw mr-1"></i></span><span class="ms-2" style="  font-family: 'Inconsolata', monospace;
+              font-family: 'Josefin Sans', sans-serif; font-size:20px; ">cheapurch@gmail.com</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fa fa-sign-in fa-fw mr-1"></i></span><span class="ms-2" style="  font-family: 'Inconsolata', monospace;
+              font-family: 'Josefin Sans', sans-serif; font-size:20px; ">+775 822 38 55</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fa fa-sign-in fa-fw mr-1"></i></span><span class="ms-2" style="    font-family: 'Inconsolata', monospace;
+              font-family: 'Josefin Sans', sans-serif; font-size:20px; ">+777 788 78 78</span>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4" style=" font-family: 'Inconsolata', monospace;
+          font-family: 'Josefin Sans', sans-serif; font-size:20px; " >Opening hours</h5>
+
+          <table class="table text-center text-white">
+            <tbody class="font-weight-normal">
+              <tr>
+                <td style="   font-family: 'Inconsolata', monospace;
+                font-family: 'Josefin Sans', sans-serif; font-size:20px; ">Mon - Thu:</td>
+                <td style="  font-family: 'Inconsolata', monospace;
+                font-family: 'Josefin Sans', sans-serif; font-size:20px; ">8am - 9pm</td>
+              </tr>
+              <tr>
+                <td style="    font-family: 'Inconsolata', monospace;
+                font-family: 'Josefin Sans', sans-serif; font-size:20px; ">Fri - Sat:</td>
+                <td style="  font-family: 'Inconsolata', monospace;
+                font-family: 'Josefin Sans', sans-serif; font-size:20px; ">8am - 1am</td>
+              </tr>
+              <tr>
+                <td style=" font-family: 'Inconsolata', monospace;
+                font-family: 'Josefin Sans', sans-serif; font-size:20px; ">Sunday:</td>
+                <td style="    font-family: 'Inconsolata', monospace;
+                font-family: 'Josefin Sans', sans-serif; font-size:20px; ">9am - 10pm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      2022
+      <a class="text-white" href="#">cheapurch.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  
+</div>
+<!-- End of .container -->
+<!-- End of .container -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+{% endblock %}
+
+
