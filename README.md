@@ -1,6 +1,7 @@
 # Cheapurch
 <!-- ![image](https://user-images.githubusercontent.com/91417345/167097446-53aa033d-a6f9-4d4f-a970-15c0bdc55c33.png) -->
-![Home - Google Chrome 2022-05-25 02-24-56](https://user-images.githubusercontent.com/77920997/170126838-49055545-8080-4018-84b2-22c6d214fa07.gif)
+<!-- ![Home - Google Chrome 2022-05-25 02-24-56](https://user-images.githubusercontent.com/77920997/170126838-49055545-8080-4018-84b2-22c6d214fa07.gif) -->
+![Home - Google Chrome 2022-05-25 02-40-21 (1)](https://user-images.githubusercontent.com/77920997/170130698-ed697a37-2ce6-440d-925d-d789a2bee36b.gif)
 
 Website written of django+python for all users
 
