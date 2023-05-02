@@ -12,10 +12,6 @@ This website helps all people to sell and purchase products at the same time for
 # Database
 ![Cheapurch_online drawio (2)](https://user-images.githubusercontent.com/77920997/169233423-001041fa-d69c-4c0c-bdfb-a002a26d1c35.png)
 
-# Mentor!
-
-Bissenbay Dauletbayev - b.dauletbayev@sdu.edu.kz
-
 # Made By
 
 Diana Bekmagambetova- bkmtova.diana@gmail.com
